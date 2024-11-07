@@ -1,4 +1,4 @@
-package hello.hello_spring.controller;
+package hello.hellospring.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,7 +33,7 @@ public class HelloController {
     public Hello helloApi(@RequestParam("name") String name) {
         Hello hello = new Hello();
         hello.setName(name);
-        return hello;
+        return hello; //default : JSON -> JsonConverter 동작하여 웹 브라우저로 전달
     }
 
     static class Hello {
